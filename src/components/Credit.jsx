@@ -3,7 +3,7 @@ import React, { Component } from "react";
 class Credit extends Component {
   render() {
     return (
-      <div className="text-center">
+      <div className="text-center my-6">
         Icons made by{" "}
         <a href={"https://www.freepik.com"} title="Freepik">
           Freepik
