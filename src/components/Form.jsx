@@ -10,7 +10,7 @@ class Form extends Component {
             type="text"
             placeholder="What city?"
           />
-          <button className="flex-shrink-0 py-1 px-2 bg-blue-500 rounded-md text-white focus:outline-none hover:bg-blue-600">
+          <button className="font-regular flex-shrink-0 py-1 px-2 bg-blue-500 rounded-md text-white focus:outline-none hover:bg-blue-600">
             Search
           </button>
         </div>
