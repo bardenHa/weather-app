@@ -1,13 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lobster&display=swap");
 
 @tailwind base;
 @tailwind components;
-
-@layer base {
-  @font-face {
-    font-family: "Roboto";
-    src: url(./fonts/Roboto.ttf) format("ttf");
-  }
-}
-
 @tailwind utilities;

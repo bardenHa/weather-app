@@ -4,11 +4,13 @@ module.exports = {
   theme: {
     extend: {},
     fontFamily: {
-      Fredoka: "Fredoka One",
+      title: ["Lobster"],
     },
   },
   variants: {
-    extend: {},
+    extend: {
+      backgroundColor: ['hover', 'focus', 'active']
+    },
   },
   plugins: [],
 };
