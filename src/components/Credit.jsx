@@ -11,7 +11,28 @@ const Credit = () => {
           OpenWeather API
         </a>
       </div>
-      <div className="text-center text-xs mt-48">
+      <div className="text-center text-sm mt-24">
+        <div className="w-full max-w-sm bg-white mx-auto mx-2 py-4 rounded-md shadow">
+          <div className="items-center mx-4">
+            Copyright © 2021 - Harry Barden •
+            <a
+              href="https://github.com/bardenHa/weather-app/blob/main/LICENSE"
+              className="hover:underline mx-1"
+            >
+              {" "}
+              License
+            </a>
+            •
+            <a
+              href="https://github.com/bardenHa/weather-app/"
+              className="hover:underline mx-1"
+            >
+              Github
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="text-center text-xs mt-24">
         Favicon made by{" "}
         <a
           href={"https://www.freepik.com"}
