@@ -10,13 +10,17 @@ class ResultForm extends Component {
         <div className="mx-8 mt-4">
           <table className="w-full table-fixed border-gray-200 border-collapse">
             <tr className="border-none">
-              <th className="w-1/4 py-2 border-b border-gray-300">Low</th>
+              <th className="w-1/4 py-2 px-4 border-b border-gray-300 text-left">
+                Low
+              </th>
               <td className="py-2 px-4 border-b border-gray-300 text-right">
                 16.4 C
               </td>
             </tr>
             <tr className="border-none">
-              <th className="w-1/4 py-2 border-b border-gray-300">High</th>
+              <th className="w-1/4 py-2 px-4 border-b border-gray-300 text-left">
+                Highest
+              </th>
               <td className="py-2 px-4 border-b border-gray-300 text-right">
                 36.6 C
               </td>
