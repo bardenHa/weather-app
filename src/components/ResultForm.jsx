@@ -1,4 +1,6 @@
-const ResultForm = () => {
+import leftArrow from "../img/left-arrow.png";
+
+const ResultForm = ({ handleClick }) => {
   return (
     <div className="w-full max-w-sm bg-white mx-auto mx-2 py-8 rounded-md text-regular shadow">
       <div className="mx-8 mt-4 pb-4 border-b border-gray-300">
@@ -75,6 +77,15 @@ const ResultForm = () => {
             </tr>
           </tbody>
         </table>
+      </div>
+      <div className="flex mx-8 mt-8 justify-center">
+        <button
+          onClick={(e) => handleClick("Form", e)}
+          className="flex items-center space-x-6 content-center font-regular flex-shrink-0 py-1 px-2 bg-blue-500 rounded-md text-white focus:outline-none hover:bg-blue-600"
+        >
+          <p className="">Back</p>
+          <img src={leftArrow} className="h-8" alt="back arrow" />
+        </button>
       </div>
     </div>
   );

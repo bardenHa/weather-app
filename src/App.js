@@ -8,10 +8,13 @@ import { getWeatherData } from "./services/getWeatherData";
 getWeatherData("London");
 
 const App = () => {
-  const handleClick = (e) => {
+  const handleClick = (destination, e) => {
     console.log("handle");
     e.preventDefault();
-    setComponent(<ResultForm />);
+
+    destination === "ResultForm"
+      ? setComponent(<ResultForm handleClick={handleClick} />)
+      : setComponent(<Form handleClick={handleClick} />);
   };
 
   const [component, setComponent] = useState(
