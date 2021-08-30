@@ -1,4 +1,4 @@
-const Form = () => {
+const Form = ({ handleClick }) => {
   return (
     <form className="w-full max-w-sm bg-white mx-auto mx-2 py-8 rounded-md shadow">
       <div className="flex items-center mx-8 space-x-3">
@@ -7,7 +7,10 @@ const Form = () => {
           type="text"
           placeholder="What city?"
         />
-        <button className="font-regular flex-shrink-0 py-1 px-2 bg-blue-500 rounded-md text-white focus:outline-none hover:bg-blue-600">
+        <button
+          onClick={(e) => handleClick(e)}
+          className="font-regular flex-shrink-0 py-1 px-2 bg-blue-500 rounded-md text-white focus:outline-none hover:bg-blue-600"
+        >
           Search
         </button>
       </div>
