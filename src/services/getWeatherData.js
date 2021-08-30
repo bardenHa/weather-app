@@ -11,10 +11,6 @@ export const getWeatherData = (cityName) => {
     })
     .then((data) => {
       return data;
-    })
-    .catch((err) => {
-      console.log(err.message);
-      return err.message;
     });
 
   return call;

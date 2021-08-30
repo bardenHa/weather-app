@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Credit from "./components/Credit";
-//import ErrorPage from "./components/ErrorPage";
+import ErrorPage from "./components/ErrorPage";
 import Form from "./components/Form";
 import ResultForm from "./components/ResultForm";
 import { getWeatherData } from "./services/getWeatherData";
@@ -14,13 +14,19 @@ const App = () => {
     const cityName = document.getElementById("City").value;
     const weatherData = await getWeatherData(cityName);
 
-    setComponent(<ResultForm goBack={goBack} weatherData={weatherData} />);
+    weatherData.cod !== 200
+      ? errorMessage(weatherData.message, weatherData.cod)
+      : setComponent(<ResultForm goBack={goBack} weatherData={weatherData} />);
   };
 
   const goBack = (e) => {
     e.preventDefault();
 
     setComponent(<Form goResults={goResults} />);
+  };
+
+  const errorMessage = (err, code) => {
+    setComponent(<ErrorPage goBack={goBack} error={err} errorCode={code} />);
   };
 
   const [component, setComponent] = useState(<Form goResults={goResults} />);
