@@ -3,7 +3,7 @@ import { Component } from "react";
 class ResultForm extends Component {
   render() {
     return (
-      <div className="w-full max-w-sm bg-white mx-auto mx-2 py-8 rounded-md text-regular">
+      <div className="w-full max-w-sm bg-white mx-auto mx-2 py-8 rounded-md text-regular shadow">
         <div className="mx-8 mt-4">
           <h1 className="text-left text-2xl font-bold">London, GB</h1>
         </div>
