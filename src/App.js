@@ -8,18 +8,22 @@ import { getWeatherData } from "./services/getWeatherData";
 getWeatherData("London");
 
 const App = () => {
-  const handleClick = (destination, e) => {
-    console.log("handle");
+  const goResults = async (e) => {
     e.preventDefault();
 
-    destination === "ResultForm"
-      ? setComponent(<ResultForm handleClick={handleClick} />)
-      : setComponent(<Form handleClick={handleClick} />);
+    const cityName = document.getElementById("City").value;
+    const weatherData = await getWeatherData(cityName);
+
+    setComponent(<ResultForm goBack={goBack} weatherData={weatherData} />);
   };
 
-  const [component, setComponent] = useState(
-    <Form handleClick={handleClick} />
-  );
+  const goBack = (e) => {
+    e.preventDefault();
+
+    setComponent(<Form goResults={goResults} />);
+  };
+
+  const [component, setComponent] = useState(<Form goResults={goResults} />);
 
   return (
     <div className="App p-6 lg:p-24 h-screen bg-gray-100">
