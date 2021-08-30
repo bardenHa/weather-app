@@ -2,9 +2,20 @@ import * as fetchURL from "../constants/fetchURL";
 
 const _apiKey = process.env.REACT_APP_API_KEY;
 
-console.log(_apiKey);
-
 export const getWeatherData = (cityName) => {
-  cityName = "London";
-  console.log(fetchURL.cityNameUrl(cityName, _apiKey));
+  const url = fetchURL.cityNameUrl(cityName, _apiKey);
+
+  const call = fetch(url, { mode: "cors" })
+    .then((res) => {
+      return res.json();
+    })
+    .then((data) => {
+      return data;
+    })
+    .catch((err) => {
+      console.log(err.message);
+      return err.message;
+    });
+
+  return call;
 };
